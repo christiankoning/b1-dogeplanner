@@ -1,0 +1,48 @@
+main {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  background-color: var(--primary);
+  padding-top: 120px;
+  padding-bottom: 20px;
+  color: white;
+}
+main .services {
+  height: auto !important;
+}
+main .title-div {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+main .title-div a {
+  margin: 0 20px;
+}
+main .model {
+  width: 50%;
+  border: solid 1px var(--secondary);
+  border-radius: 24px;
+  padding: 20px;
+}
+main form .error {
+  color: red;
+  margin: 0;
+}
+main form label {
+  margin-top: 10px;
+}
+main form input, main form select {
+  width: 100%;
+  padding: 10px 5px;
+  border: solid 1px var(--secondary);
+  background-color: transparent;
+  color: white;
+  outline: none;
+}
+main form input[type=submit], main form select[type=submit] {
+  margin-top: 15px;
+}
+main form option {
+  color: black;
+}
