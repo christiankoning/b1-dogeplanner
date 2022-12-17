@@ -1,0 +1,72 @@
+
+
+<?php $__env->startSection('content'); ?>
+    <section class="walkShowSection d-flex align-items-center py-5" id="plans">
+        <div class="container text-light">
+            <div class="text-center pb-4">
+                <h2 class="py-2">Wandeling weergeven</h2>
+            </div>
+            <div class="pull-right pb-4">
+                <a class="btn btn-succes" href="<?php echo e(route('walk.index')); ?>">Terug</a>
+            </div>
+            <div class="row gy-4 justify-content-center" data-aos="zoom-in">
+                <div class="col-lg-4">
+                    <div class="card bg-transparent px-4">
+                        <div class="col-xs-12 col-sm-12 col-md-12">
+                            <div class="form-group">
+                                <strong>Datum:</strong>
+                                <?php echo e(\Carbon\Carbon::parse($walk->date)->format('d-m-Y h:i')); ?>
+
+                            </div>
+                        </div>
+                        <div class="col-xs-12 col-sm-12 col-md-12">
+                            <div class="form-group">
+                                <strong>Starttijd:</strong>
+                                <?php echo e(\Carbon\Carbon::parse($walk->start_time)->format('h:i')); ?>
+
+                            </div>
+                        </div>
+                        <div class="col-xs-12 col-sm-12 col-md-12">
+                            <div class="form-group">
+                                <strong>Eindtijd:</strong>
+                                <?php echo e(\Carbon\Carbon::parse($walk->end_time)->format('h:i')); ?>
+
+                            </div>
+                        </div>
+                        <div class="col-xs-12 col-sm-12 col-md-12">
+                            <div class="form-group">
+                                <strong>Hoeveelheid honden:</strong>
+                                <?php echo e($walk->amount_dogs); ?>
+
+                            </div>
+                        </div>
+                        <div class="col-xs-12 col-sm-12 col-md-12">
+                            <div class="form-group">
+                                <strong>Locatie:</strong>
+                                <?php echo e($walk->location); ?>
+
+                            </div>
+                        </div>
+                        <div class="col-xs-12 col-sm-12 col-md-12">
+                            <div class="form-group">
+                                <strong>Aangemaakt op:</strong>
+                                <?php echo e(\Carbon\Carbon::parse($walk->created_at)->format('d-m-Y h:i')); ?>
+
+                            </div>
+                        </div>
+                        <div class="col-xs-12 col-sm-12 col-md-12">
+                            <div class="form-group">
+                                <strong>Aangepast op:</strong>
+                                <?php echo e(\Carbon\Carbon::parse($walk->updated_at)->format('d-m-Y h:i')); ?>
+
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div> <!-- end of row -->
+        </div> <!-- end of container -->
+    </section> <!-- end of plans -->
+<?php $__env->stopSection(); ?>
+
+<?php echo $__env->make('layout.user', \Illuminate\Support\Arr::except(get_defined_vars(), ['__data', '__path']))->render(); ?><?php /**PATH M:\Phpstorm Code\b1-dogeplanner\resources\views//walk/show.blade.php ENDPATH**/ ?>
